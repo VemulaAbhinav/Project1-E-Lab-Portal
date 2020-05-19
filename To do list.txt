@@ -1,0 +1,14 @@
+--> professor login questions homework
+
+
+1)PROGRAM EXECUTION ONE PAGE IN/OUT
+
+2)DATABASE CONNECTIVITY
+
+3)INTER FACE WEEK PROGRAMS
+
+4)TEST CASES
+
+5)
+
+
