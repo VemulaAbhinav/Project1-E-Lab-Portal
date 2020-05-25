@@ -22,8 +22,8 @@ if(isset($_SESSION['un']))
 <!DOCTYPE html>
 <html>
 <head>
-  
-    
+
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Home</title>
@@ -63,9 +63,9 @@ if(isset($_SESSION['un']))
       <li class="space"><a href="code.php"><i class="fa fa-check-square ispace"></i>Debug</a></li>
       <li class="lgspace space"><a href="profile.php?user=<?php echo("$username"); ?>"><i class="fa fa-user ispace"></i><?php echo("$username"); ?></a></li>
       <li class="space"><a href="logout.php"><i class="fa fa-power-off ispace"></i>Logout</a></li>
-      
+
     </ul>
-  
+
 </nav>
 </div>
 </div>-->
@@ -118,8 +118,8 @@ function submitForm(oFormElement)
 <div id="services" class="container-fluid text-center">
   <br><br><br><br><br>
   <!-- <h2 style="font-family: Lucida Console">SERVICES</h2> -->
- 
- 
+
+
   <div class="row slideanim">
     <div class="col-sm-6">
       <a href="compiler.php"><span class="fa fa-code logo-small"></span>
@@ -174,10 +174,10 @@ $q3="SELECT * FROM rapl_oj_contest ORDER BY date_on DESC LIMIT 0,2";
       $sq4=mysqli_query($con,$q4);
       $sq5=mysqli_query($con,$q5);
       $sq6=mysqli_query($con,$q6);
-      
 
-      
-   
+
+
+
   while($row=mysqli_fetch_array($sq3))
     {
       $d=date("Y-m-d");
@@ -187,7 +187,7 @@ $q3="SELECT * FROM rapl_oj_contest ORDER BY date_on DESC LIMIT 0,2";
       $nr=mysqli_fetch_array($sq4);
       $nm=mysqli_fetch_array($sq5);
       $ns=mysqli_fetch_array($sq6);
-      
+
       $shr=$nr['end_at'];
       $shm=$nm['end_at'];
       $shs=$ns['end_at'];
@@ -215,7 +215,7 @@ $q3="SELECT * FROM rapl_oj_contest ORDER BY date_on DESC LIMIT 0,2";
       {
         $h=$h+24;
       }
-      
+
       $en=$row['end_at'];
 
       $seconds = strtotime($t) - strtotime($m);
@@ -225,22 +225,22 @@ $q3="SELECT * FROM rapl_oj_contest ORDER BY date_on DESC LIMIT 0,2";
       $hr=intval($min/60);
       $m=intval($min%60);
 
-     
 
 
-      
-
-     
-      
 
 
-     
+
+
+
+
+
+
       /*echo(" <a href=\"save.php?name=$row[table_name]\">$row[table_name]</a><br><br>");*/
         if($row['date_on']==$d && $seconds>=0 && $ss>=0 )
         {
              echo("
 
-              
+
 
               <div class=\"xm\">Lab Name: <a href=\"contestproblem.php?name=$row[cname]\">$row[cname]</a><br><br>Lab ID: $row[id]<br><br>Lab Date: $row[date_on] <br><br>Start Time: $row[start_at]<br><br>End Time: $row[end_at] <br><br> Status: <b>Running</b> <br>
               <center>
@@ -249,7 +249,7 @@ $q3="SELECT * FROM rapl_oj_contest ORDER BY date_on DESC LIMIT 0,2";
               <!--Time Remaining:  $h hour $mt minute $scnd second <br><br>-->
 
               <div id='timeRem$row[id]' style='object-fit:contain'></div>
-              
+
               <script type='text/javascript'>
               var date2 = '$row[date_on] $row[end_at]';
 
@@ -275,7 +275,7 @@ $q3="SELECT * FROM rapl_oj_contest ORDER BY date_on DESC LIMIT 0,2";
               document.getElementById('timeRem').innerHTML = 'Time Remaining: ' + days + 'd ' + hours + 'h '
               + minutes + 'm ' + seconds + 's ';
 
-              // If the count down is finished, write some text 
+              // If the count down is finished, write some text
               if (distance < 0) {
                 clearInterval(x);
                 document.getElementById('timeRem').innerHTML = 'EXPIRED';
@@ -305,7 +305,7 @@ $q3="SELECT * FROM rapl_oj_contest ORDER BY date_on DESC LIMIT 0,2";
 
 
 ?>
-  
+
 </div>
 </div>
 
@@ -317,5 +317,3 @@ require_once("footer.php");
 </div>
 </body>
 </html>
-
-

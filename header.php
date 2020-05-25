@@ -16,8 +16,8 @@ if(isset($_SESSION['un']))
 <!DOCTYPE html>
 <html>
 <head>
-  
-    
+
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Home</title>
@@ -73,8 +73,8 @@ $(window).load(function() {
   <div class="row">
   <div class="col-sm-12">
   <div id="custom-bootstrap-menu" class="navbar navbar-default" role="navigation">
-  <div style="padding-bottom: 10px;padding-top: 10px"><center><span class="ht" style="padding-bottom: 10px"><img src="img/logo.png" width="150px" height="40px"/></span></center></div> 
-   
+  <div style="padding-bottom: 10px;padding-top: 10px"><center><span class="ht" style="padding-bottom: 10px"><img src="img/logo.png" width="150px" height="40px"/></span></center></div>
+
     <div class="container-fluid">
         <div class="navbar-header "><a class="navbar-brand " href="home.php"></a>
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
@@ -84,7 +84,7 @@ $(window).load(function() {
             <ul class="nav navbar-nav navbar-left" style="margin-left: 110px">
                 <li  class="space2"><a href="home.php">Home</a>
                 <li  class="space2"><a href="compiler.php">Compiler</a>
-                <li  class="space2"><a href="archive.php">Practice</a>
+                <li  class="space2"><a href="archive.php">Lab</a>
                  <li  class="space2"><a href="contest.php">All Batches</a>
                 <li  class="space2"><a href="/MCQ">Tutorial Tests</a>
                 <?php
@@ -100,7 +100,7 @@ $(window).load(function() {
                     echo "<li class=\"space2\"><a href=\"sign.php\">Register</a>";
                   }
                 ?>
-                
+
             </ul>
         </div>
     </div>
