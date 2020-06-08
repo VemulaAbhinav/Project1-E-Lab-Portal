@@ -1,5 +1,5 @@
 <?php
-    
+
     putenv("PATH=C:\Program Files (x86)\CodeBlocks\MinGW\bin");
 	$CC="gcc";
 	$out="a.exe";
@@ -9,20 +9,20 @@
 	$filename_in="input.txt";
 	$filename_error="error.txt";
 	$executable="a.exe";
-	$command=$CC." -lm ".$filename_code;	
+	$command=$CC." -lm ".$filename_code;
 	$command_error=$command." 2>".$filename_error;
 
 	//if(trim($code)=="")
 	//die("The code area is empty");
-	
+
 	$file_code=fopen($filename_code,"w+");
 	fwrite($file_code,$code);
 	fclose($file_code);
 	$file_in=fopen($filename_in,"w+");
 	fwrite($file_in,$input);
 	fclose($file_in);
-	exec("cacls  $executable /g everyone:f"); 
-	exec("cacls  $filename_error /g everyone:f");	
+	exec("cacls  $executable /g everyone:f");
+	exec("cacls  $filename_error /g everyone:f");
 
 	shell_exec($command_error);
 	$error=file_get_contents($filename_error);
@@ -65,3 +65,29 @@
 	exec("del *.txt");
 	exec("del $executable");
 ?>
+<!--DOCTYPE html>
+code 1
+<html>
+<head></head>
+<body>
+<a href="page2.php" target="_self">go back</a>
+</body>
+</html-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--button onclick="goBack()">Go Back</button-->
+
+<p></p>
+
+<script>
+//function goBack() {
+  //window.history.go(-1);
+//}
+    document.write('<a href="' + document.referrer + '">Go Back</a>');
+
+</script>
+
+</body>
+</html>
