@@ -83,7 +83,7 @@ require_once("header1.php");
 <div class="container-fluid row cspace2 slideanim" style="margin-top: 35px">
 <div class="col-sm-7">
 <div class="form-group">
-<form action="compile.php" name="f2" method="POST">
+<form action="compile1.php" name="f2" method="POST">
   <h3 style= "color:white;" >write a c program to find substraction of two numbers?</h3>
   <select class="form-control" name="language">
   <option value="c">C</option>
