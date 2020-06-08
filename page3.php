@@ -76,7 +76,7 @@ if(isset($_SESSION['un']))
 
 <?php
 
-require_once("header.php");
+require_once("header1.php");
 
 ?>
 <br><br>
@@ -84,15 +84,15 @@ require_once("header.php");
 <div class="col-sm-7">
 <div class="form-group">
 <form action="compile.php" name="f2" method="POST">
-<h3>write a c program to find sum of two numbers?</h3>
+<h3 style= "color:white;">write a c program to find sum of two numbers?</h3>
 <select class="form-control" name="language">
 <option value="c">C</option>
 
 </select><br><br>
 
-<label for="ta">Write Your Code</label>
+<label for="ta" style= "color:white;">Write Your Code</label>
 <textarea class="form-control" name="code" rows="10" cols="50"></textarea><br><br>
-<label for="in">Enter Your Input</label>
+<label for="in" style= "color:white;">Enter Your Input</label>
 <textarea class="form-control" name="input" rows="10" cols="50"></textarea><br><br>
 <input type="submit" class="btn btn-success" value="Run Code"><br><br><br>
 
@@ -120,8 +120,7 @@ function submitForm(oFormElement)
 </div>
 </div>
 
-<div class="col-sm-5">
-    <div class="pb">Recent And Upcoming Labs</div>
+
 
 <?php
 
