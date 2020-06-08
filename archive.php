@@ -43,7 +43,7 @@ if(isset($_SESSION['un']))
 
 				<frameset cols="50%,*">
 					<frame src="page1.php" name="page1">
-					<frame name="page2">
+					<frame name="side2">
 				</frameset>
 
 
