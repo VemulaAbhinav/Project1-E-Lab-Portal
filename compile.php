@@ -22,8 +22,8 @@ if(isset($_SESSION['un']))
 <!DOCTYPE html>
 <html>
 <head>
-  
-    
+
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Home</title>
@@ -38,7 +38,7 @@ if(isset($_SESSION['un']))
         <script src="js/vendor/jquery-1.12.0.min.js"></script>
         <script src="bootstrap-3.3.7/js/bootstrap.min.js" </script>
         <script src="bootstrap-3.3.7/js/bootstrap.js" </script>
-        
+
 
 
 
@@ -51,7 +51,7 @@ if(isset($_SESSION['un']))
 <div class="main">
 <?php
 
-require_once("header.php");
+require_once("header1.php");
 
 ?>
 
@@ -65,7 +65,7 @@ require_once("header.php");
 </div>
 
 <div class="col-sm-1">
-  
+
 </div>
 
 </div>
@@ -106,13 +106,13 @@ require_once("header.php");
 					break;
 				}
 
-				
+
 				case "java":
-				{	
+				{
 					include("compilers/java.php");
 					break;
 				}
-				
+
 			}
 	}
 ?>
