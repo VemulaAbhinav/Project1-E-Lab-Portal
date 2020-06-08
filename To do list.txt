@@ -12,4 +12,7 @@
 5)
 
 
- Changes made to check.
+<frameset cols="50%,*">
+  <frame src="page1.php" name="page1">
+  <frame name="page2">
+</frameset>

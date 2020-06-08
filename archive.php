@@ -4,12 +4,7 @@ session_start();
 
 if(!isset($_SESSION["un"]))
 {
-
-
-	header("Location:testhtml.html");
-
-
-
+	header("Location:login.html");
 }
 
 if(isset($_SESSION['un']))
@@ -55,8 +50,6 @@ if(isset($_SESSION['un']))
 <?php
 
 include("header.php");
-
-
 ?>
 
 
@@ -67,10 +60,16 @@ require_once("config.php");
 
 
 ?>
+<frameset cols="50%,*">
+	<frame src="page1.php" name="page1">
+	<frame name="page2">
+</frameset>
 
 </div>
 
 	<div class="col-sm-2">
+
+
 
 	</div>
 	</div>
