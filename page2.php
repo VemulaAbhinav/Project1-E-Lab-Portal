@@ -84,14 +84,9 @@ require_once("header.php");
 <div class="col-sm-7">
 <div class="form-group">
 <form action="compile.php" name="f2" method="POST">
-<label for="lang">Choose Language</label>
-
-<select class="form-control" name="language">
-<option value="c">C</option>
-<option value="cpp">C++</option>
-<!-- <option value="cpp11">C++11</option> -->
-<option value="java">Java</option>
-
+  <h3>write a c program to find substraction of two numbers?</h3>
+  <select class="form-control" name="language">
+  <option value="c">C</option>
 
 </select><br><br>
 
