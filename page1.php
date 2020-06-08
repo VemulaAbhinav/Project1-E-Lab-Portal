@@ -7,7 +7,7 @@
   <input type="submit" name="" value="simulate1"  >
 </form>
 
-<form action="page3.php" method="POST" name="form2" onsubmit="document.form2.target='side2'; return true;">
+<form action="page2.php" method="POST" name="form2" onsubmit="document.form2.target='side2'; return true;">
 <input type="submit" name="" value="simulate2"  >
 </form>
 
