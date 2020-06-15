@@ -1,8 +1,8 @@
 <?php
 
-    putenv("PATH=C:\Program Files\Java\jdk 1.8.0_181\bin");
+  //  putenv("PATH=C:\Program Files\Java\jdk 1.8.0_181\bin");
 
-    //putenv("PATH=C:\Program Files\Java\jdk-14.0.1\bin");
+    putenv("PATH=C:\Program Files\Java\jdk-14.0.1\bin");
 
 	$CC="javac";
 	$out="java Main";
