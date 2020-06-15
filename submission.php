@@ -21,8 +21,8 @@ if(isset($_SESSION['un']))
 <!DOCTYPE html>
 <html>
 <head>
-  
-    
+
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>All Submission</title>
@@ -56,9 +56,9 @@ if(isset($_SESSION['un']))
       <li class="space"><a href="#"><i class="fa fa-cogs ispace"></i>Contests</a></li>
       <li class="space"><a href="#"><i class="fa fa-check-square ispace"></i>Debug</a></li>
       <li class="lgspace space"><a href="profile.php?user=<?php echo("$username"); ?>"><i class="fa fa-user ispace"></i><?php echo("$username"); ?></a></li>
-      
+
     </ul>
-  
+
 </nav>
 </div>
 </div>
@@ -74,7 +74,7 @@ if(isset($_SESSION['un']))
 </div>
 
 <div class="col-sm-1">
-  
+
 </div>
 
 </div>
@@ -170,7 +170,7 @@ $sts=mysqli_query($con,$show);
 while($row=mysqli_fetch_array($sts))
 {
 
-	
+
 echo "<tr><td><a href=\"showcode.php?id=$row[sid]&nm=$row[sname]\">$row[sid]</a></td><td><a href=\"profile.php?user=$row[sname]\">$row[sname]</a></td><td><a href=\"description.php?name=$row[pbname]\">$row[pbname]</a></td><td>$row[verdict]</td></tr>";
 
 
@@ -203,9 +203,6 @@ echo "<tr><td><a href=\"showcode.php?id=$row[sid]&nm=$row[sname]\">$row[sid]</a>
 
 
 <div class="fm">
-
-<b>Beta Version-2016</b><br>
-<b>Developed By Ashadullah Shawon</b>
 
 </div>
 </div>
