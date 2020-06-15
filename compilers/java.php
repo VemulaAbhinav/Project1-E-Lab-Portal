@@ -1,6 +1,10 @@
 <?php
 
+<<<<<<< HEAD
     putenv("PATH=C:\Program Files\Java\jdk 1.8.0_181\bin");
+=======
+    putenv("PATH=C:\Program Files\Java\jdk-14.0.1\bin");
+>>>>>>> f0b3ba53eda7b6d809f7cd282a2e6d06ff85a326
 	$CC="javac";
 	$out="java Main";
 	$code=$_POST["code"];
