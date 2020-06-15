@@ -1,6 +1,6 @@
 <?php
 
-    putenv("PATH=C:\Program Files\Java\jdk-11.0.2\bin");
+    putenv("PATH=C:\Program Files\Java\jdk 1.8.0_181\bin");
 	$CC="javac";
 	$out="java Main";
 	$code=$_POST["code"];
@@ -10,21 +10,21 @@
 	$filename_error="error.txt";
 	$runtime_file="runtime.txt";
 	$executable="*.class";
-	$command=$CC." ".$filename_code;	
+	$command=$CC." ".$filename_code;
 	$command_error=$command." 2>".$filename_error;
 	$runtime_error_command=$out." 2>".$runtime_file;
 
 	//if(trim($code)=="")
 	//die("The code area is empty");
-	
+
 	$file_code=fopen($filename_code,"w+");
 	fwrite($file_code,$code);
 	fclose($file_code);
 	$file_in=fopen($filename_in,"w+");
 	fwrite($file_in,$input);
 	fclose($file_in);
-	exec("cacls  $executable /g everyone:f"); 
-	exec("cacls  $filename_error /g everyone:f");	
+	exec("cacls  $executable /g everyone:f");
+	exec("cacls  $filename_error /g everyone:f");
 
 	shell_exec($command_error);
 	$error=file_get_contents($filename_error);
@@ -45,7 +45,7 @@
 			$output=shell_exec($out);
 		}
 		//echo "<pre>$runtime_error</pre>";
-		//echo "<pre>$output</pre>";	
+		//echo "<pre>$output</pre>";
 		  echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
 	}
 	else if(!strpos($error,"error"))
@@ -62,7 +62,8 @@
 		}
 		//echo "<pre>$output</pre>";
 		  echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">$output</textarea><br><br>";
-	}
+      echo"its wordking fine";
+  }
 	else
 	{
 		echo "<pre>$error</pre>";
@@ -70,4 +71,23 @@
 	exec("del $filename_code");
 	exec("del *.txt");
 	exec("del $executable");
-?>
+
+  ?>
+  <!DOCTYPE html>
+  <html>
+  <body>
+
+  <!--button onclick="goBack()">Go Back</button-->
+
+  <p></p>
+
+  <script>
+  //function goBack() {
+    //window.history.go(-1);
+  //}
+      document.write('<a href="' + document.referrer + '">Go Back</a>');
+
+  </script>
+
+  </body>
+  </html>
