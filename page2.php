@@ -89,11 +89,13 @@ require_once("header1.php");
   <option value="c">C</option>
 
 </select><br><br>
-
-<label for="ta" style= "color:white;" >Write Your Code</label>
-<textarea class="form-control" name="code" rows="10" cols="50" ></textarea><br><br>
+<select  class="form-control" name="progid">
+<option value="week1a">week1a</option>
+</select><br><br>
+<label for="ta" style= "color:white;" >Write Your Code</label><br>
+<textarea class="form-control1" name="code" rows="30" cols="100%" ></textarea><br><br>
 <label for="in" style= "color:white;" >Enter Your Input</label>
-<textarea class="form-control" name="input" rows="10" cols="50"></textarea><br><br>
+<textarea class="form-control1" name="input" rows="13" cols="70%"></textarea><br><br>
 <input type="submit" class="btn btn-success" value="Run Code"><br><br><br>
 
 

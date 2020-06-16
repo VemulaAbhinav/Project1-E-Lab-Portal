@@ -12,9 +12,6 @@ if(isset($_SESSION['un']))
 }
 
 
-
-
-
 ?>
 
 
@@ -37,12 +34,6 @@ if(isset($_SESSION['un']))
         <script src="js/vendor/jquery-1.12.0.min.js"></script>
         <script src="bootstrap-3.3.7/js/bootstrap.min.js" </script>
         <script src="bootstrap-3.3.7/js/bootstrap.js" </script>
-
-
-
-
-
-
 
 
 </head>
@@ -70,31 +61,32 @@ require_once("header1.php");
 </div>
 
 
-
-
 <div class="row cspace">
 <div class="col-sm-1">
 </div>
 <div class="col-sm-8">
 
 
-
-
-
-
 <?php
+if(isset($_POST['code']))
+{
+$id1=$_POST['progid'];
 $cd=$_POST['code'];
+//$user1=$_SESSION['user1'];
 $query="INSERT INTO check3 (name) value ('$cd')";
 $sq=mysqli_query($con,$query);
-
 if($sq)
 {
-	echo "stored success";
+	echo "stored success $username with $id1 ";
 }
 else
 {
 	echo("Failed to store<br>");
 }
+}
+
+
+
 
 	$languageID=$_POST["language"];
         error_reporting(0);
