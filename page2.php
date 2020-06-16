@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+require_once("config.php");
 if(!isset($_SESSION["un"]))
 {
   header("Location:login.php");
@@ -91,13 +91,16 @@ require_once("header1.php");
 </select><br><br>
 
 <label for="ta" style= "color:white;" >Write Your Code</label>
-<textarea class="form-control" name="code" rows="10" cols="50"></textarea><br><br>
+<textarea class="form-control" name="code" rows="10" cols="50" ></textarea><br><br>
 <label for="in" style= "color:white;" >Enter Your Input</label>
 <textarea class="form-control" name="input" rows="10" cols="50"></textarea><br><br>
 <input type="submit" class="btn btn-success" value="Run Code"><br><br><br>
 
 
-</form>
+
+
+
+
 
 <!--<script>
 "use strict";

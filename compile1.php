@@ -1,7 +1,6 @@
 <?php
-
+require_once("config.php");
 session_start();
-
 if(!isset($_SESSION["un"]))
 {
   header("Location:login.php");
@@ -84,6 +83,18 @@ require_once("header1.php");
 
 
 <?php
+$cd=$_POST['code'];
+$query="INSERT INTO check3 (name) value ('$cd')";
+$sq=mysqli_query($con,$query);
+
+if($sq)
+{
+	echo "stored success";
+}
+else
+{
+	echo("Failed to store<br>");
+}
 
 	$languageID=$_POST["language"];
         error_reporting(0);
