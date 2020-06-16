@@ -12,9 +12,25 @@ if(isset($_SESSION['un']))
   $username=$_SESSION['un'];
 }
 
+$query = "SELECT * from check3";
+            $result = mysqli_query($con,$query);
+            if($result)
+            {
+            	echo "retrived success $username ";
+            }
+            else
+            {
+            	echo("Failed to store<br>");
+            }
+  while($row=mysqli_fetch_assoc($result))
+   {
+       echo"<tr>";
+       echo"<td>";?> <?php echo $row['id'] ; ?>  <?php echo "</td></tr><tr>";
+       echo"<td>";?> <?php echo $row['name'] ; ?>  <?php echo "</td>";
 
-
-
+       echo"</tr>";
+   }
+   echo"</table>";
 
 ?>
 
@@ -93,7 +109,34 @@ require_once("header1.php");
 <option value="week1a">week1a</option>
 </select><br><br>
 <label for="ta" style= "color:white;" >Write Your Code</label><br>
-<textarea class="form-control1" name="code" rows="30" cols="100%" ></textarea><br><br>
+<textarea class="form-control1" name="code" rows="30" cols="100%" value="abhinav" ><?php
+
+$query = "SELECT  name from check3 where id=9";
+            $result = mysqli_query($con,$query);
+            if($result)
+            {
+            	//echo "retrived success $username ";
+            }
+            else
+            {
+            	//echo("Failed to store<br>");
+            }
+             //echo"<table>";
+  while($row=mysqli_fetch_assoc($result))
+   {
+       /*echo"<tr>";
+       echo"<td>";?> <?php echo $row['id'] ; ?>  <?php echo "</td></tr><tr>";
+       echo"<td>";?> <?php echo $row['name'] ; ?>  <?php echo "</td>";
+
+       echo"</tr>";
+       */
+
+       echo($row['name']);
+   }
+   //echo"</table>";
+
+
+  ?></textarea><br><br>
 <label for="in" style= "color:white;" >Enter Your Input</label>
 <textarea class="form-control1" name="input" rows="13" cols="70%"></textarea><br><br>
 <input type="submit" class="btn btn-success" value="Run Code"><br><br><br>
