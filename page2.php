@@ -12,7 +12,7 @@ if(isset($_SESSION['un']))
   $username=$_SESSION['un'];
 }
 
-$query = "SELECT * from check3";
+/*$query = "SELECT * from check3";
             $result = mysqli_query($con,$query);
             if($result)
             {
@@ -31,7 +31,7 @@ $query = "SELECT * from check3";
        echo"</tr>";
    }
    echo"</table>";
-
+*/
 ?>
 
 
@@ -100,7 +100,7 @@ require_once("header1.php");
 <div class="col-sm-7">
 <div class="form-group">
 <form action="compile1.php" name="f2" method="POST">
-  <h3 style= "color:white;" >write a c program to find substraction of two numbers?</h3>
+  <h3 style= "color:white;" >write a c program to print hello world!</h3>
   <select class="form-control" name="language">
   <option value="c">C</option>
 

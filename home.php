@@ -138,8 +138,10 @@ function submitForm(oFormElement)
   <div class="row slideanim">
     <div class="col-sm-6">
        <a href="contest.php"><span class="fa fa-cogs logo-small"></span>
-      <h4 style="font-weight: bold; text-transform: uppercase;">Batches</h4>
-      <p>Our Portal Judges Codes And Gives Result</p>
+      <!--h4 style="font-weight: bold; text-transform: uppercase;">Batches</h4-->
+      <h4 style="font-weight: bold; text-transform: uppercase;">Online Test</h4>
+      <!--p>Our Portal Judges Codes And Gives Result</p-->
+      <p>Tutoral test</p>
       </a>
     </div>
     <div class="col-sm-6">

@@ -24,8 +24,8 @@ if(isset($_GET['user']))
 <!DOCTYPE html>
 <html>
 <head>
-  
-    
+
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Profile</title>
@@ -42,9 +42,9 @@ if(isset($_GET['user']))
         <script src="bootstrap-3.3.7/js/bootstrap.js" </script>
         <script src="js/jquery.nivo.slider.js" type="text/javascript"></script>
 
-        
 
-        
+
+
 </head>
 <body>
 <div class="main">
@@ -65,7 +65,7 @@ require_once("header.php");
 </div>
 
 <div class="col-sm-1">
-  
+
 </div>
 
 </div>
@@ -85,13 +85,13 @@ $row=mysqli_fetch_array($send);
 <div class="col-sm-8">
 
 
-  
+
    <form action="update.php" method="POST">
    <label for="ta">Name</label>
    <input type="text" name="name" value="<?php echo("$row[name]")  ?>" class="form-control"><br><br>
    <label for="ta">Email</label>
    <input type="text" name="email" value="<?php echo("$row[email]")  ?>" class="form-control"><br><br>
-   <label for="ta">Status</label>
+   <label for="ta">Status(year and section) </label>
    <input type="text" name="status" value="<?php echo("$row[status]")  ?>" class="form-control"><br><br>
    <input type="submit" class="btn btn-success" value="Update">
 

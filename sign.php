@@ -5,8 +5,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
-    
+
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Sign Up</title>
@@ -53,7 +53,7 @@ include("header.php");
 <input type="password" class="form-control"  name="password" placeholder="Enter Password" required><br>
 
 <button type="submit" class="btn btn-success">Sign Up</button><br><br><br><br><br><br>
-	
+
 
 </form> -->
 
@@ -82,14 +82,35 @@ include("header.php");
 <div class="wrap-input100 validate-input" data-validate="Username">
           <input class="input100" type="password" class="form-control"  name="password" placeholder="Enter Password" required><br>
           <span class="focus-input100"></span>
+
+
+
 </div>
 <br><br>
+
+
+<label for="password">Conform Password</label><br><br>
+<div class="wrap-input100 validate-input" data-validate="Username">
+          <input class="input100" type="password" class="form-control"  name="password1" placeholder="Re-Enter your Password" required><br>
+          <span class="focus-input100"></span>
+
+
+
+</div>
+<br><br>
+
+
+
+
+
+
+
 <div class="container-contact100-form-btn">
           <button class="contact100-form-btn" type="submit">
             Sign UP
           </button>
         </div><br><br>
-    
+
 
 </form>
 
@@ -111,5 +132,3 @@ include("footer.php");
 
 </body>
 </html>
-
-

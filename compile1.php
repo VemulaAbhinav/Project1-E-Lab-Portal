@@ -47,7 +47,7 @@ require_once("header1.php");
 
 <div class="row log">
 <div class="col-sm-10">
-<div class=""><h3 style="text-align:center;">Output</h3></div>
+<div class=""><h3 style="text-align:center; color:white">Output</h3></div>
 </div>
 
 <div class="col-sm-1">
@@ -77,11 +77,11 @@ $query="INSERT INTO check3 (name) value ('$cd')";
 $sq=mysqli_query($con,$query);
 if($sq)
 {
-	echo "stored success $username with $id1 ";
+	//echo "stored success $username with $id1 ";
 }
 else
 {
-	echo("Failed to store<br>");
+	//echo("Failed to store<br>");
 }
 }
 

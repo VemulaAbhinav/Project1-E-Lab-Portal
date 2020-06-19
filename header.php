@@ -85,12 +85,12 @@ $(window).load(function() {
                 <li  class="space2"><a href="home.php">Home</a>
                 <li  class="space2"><a href="compiler.php">Compiler</a>
                 <li  class="space2"><a href="archive.php">Lab</a>
-                 <li  class="space2"><a href="contest.php">All Batches</a>
+                <!--li  class="space2"><a href="contest.php">All Batches</a-->
                 <li  class="space2"><a href="/MCQ">Tutorial Tests</a>
                 <?php
                   if($u==1)
                   {
-                    echo "<li class=\"space2\"><a href=\"profile.php?user=$username\"><span style='font-size: 20px; margin-left: 13px;' class='fa fa-user'></span></a>";
+                    echo "<li class=\"space2\"><a href=\"profile.php?user=$username\">View your profile<span style='font-size: 20px; margin-left: 13px;' class='fa fa-user'></span></a>";
                     echo "<li class=\"space2\"><a href=\"logout.php\">Logout</a>";
                   }
                   else

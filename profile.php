@@ -26,8 +26,8 @@ $admin='shawon';
 <!DOCTYPE html>
 <html>
 <head>
-  
-    
+
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Profile</title>
@@ -44,9 +44,9 @@ $admin='shawon';
         <script src="bootstrap-3.3.7/js/bootstrap.js" </script>
         <script src="js/jquery.nivo.slider.js" type="text/javascript"></script>
 
-        
 
-        
+
+
 </head>
 <body>
 <div class="main">
@@ -79,7 +79,7 @@ if(isset($_GET['user']))
 </div>
 
 <div class="col-sm-1">
-  
+
 </div>
 
 </div>
@@ -101,12 +101,12 @@ $row=mysqli_fetch_array($send);
 
 <div class="ym">
  <div class="pc">Information</div>
-  
-   
+
+
    <table class="table">
     <tr><td>Name : <?php echo("$row[name]") ?></td></tr>
     <tr style="background-color: white;"><td>Email : <?php echo("$row[email]") ?></td></tr>
-    <tr><td>Occupation : <?php echo("$row[status]") ?></td></tr>
+    <tr><td>year and section : <?php echo("$row[status]") ?></td></tr>
 
     <?php
 
@@ -116,20 +116,20 @@ $row=mysqli_fetch_array($send);
      }
 
     ?>
-    
+
     </table>
 
 
   </div>
 
     <?php
-    echo " 
+    echo "
           <div class=\"ym\">
     <div class=\"pc\">Submissions</div>
-  
-   
+
+
    <ul class=\"nav nav-pills nav-stacked\">
-   
+
     <li style='background-color: white;' role=\"presentation\"><a href=\"allsubmission.php?name=$username\">Submissions by <strong> $username </strong> </a></li>
     </ul></div>";
     ?>
@@ -141,30 +141,30 @@ $row=mysqli_fetch_array($send);
 
      if($data==$_SESSION['un']  && $_SESSION['un']==$admin)
      {
-          echo " 
+          echo "
           <div class=\"ym\">
     <div class=\"pc\">Dashboard</div>
-  
-   
+
+
    <ul class=\"nav nav-pills nav-stacked\">
     <li role=\"presentation\"><a href=\"setcontest.php\">Create Lab </a></li>
     <li style='background-color: white;' role=\"presentation\"><a href=\"setcontestproblem.php\">Create Lab Question</a></li>
     <li role=\"presentation\"><a href=\"setproblem.php\">Create Practice Question</a></li>
     <li style='background-color: white;' role=\"presentation\"><a href=\"../../onlinemcqexam/admin\">Manage Tutorial Tests</a></li>
- 
+
   </ul></div>";
 
 
 
-          
+
      }
      else if($row['status']=='teacher')
      {
-         echo " 
+         echo "
           <div class=\"ym\">
     <div class=\"pc\">Dashboard</div>
-  
-   
+
+
    <ul class=\"nav nav-pills nav-stacked\">
     <li role=\"presentation\"><a href=\"setcontest.php\">Create Lab </a></li>
     <li style='background-color: white;' role=\"presentation\"><a href=\"setcontestproblem.php\">Create Lab Question</a></li>
@@ -176,20 +176,20 @@ $row=mysqli_fetch_array($send);
 
 <!--<div class="ym">
  <div class="pc">Dashboard</div>
-  
-   
+
+
    <ul class="nav nav-pills nav-stacked">
     <li role="presentation" class="active"><a href="setcontest.php">Create Contest</a></li>
     <li role="presentation"><a href="setcontestproblem.php">Create Contest Problem</a></li>
     <li role="presentation"><a href="setproblem.php">Create Archive Problem</a></li>
     <li role="presentation"><a href="allsubmission.php?name=<?php ; ?>">My Submission</a></li>
   </ul>
-  
+
  <ul class="nav nav-pills nav-stacked ">
     <li class="active"><a data-toggle="pill" href="#home">Profile</a></li>
     <li><a data-toggle="pill" href="#menu1">Submission</a></li>
     <li><a data-toggle="pill" href="#menu2">Statistics</a></li>
-  
+
   </ul>
 
   <div class="tab-content">
@@ -200,7 +200,7 @@ $row=mysqli_fetch_array($send);
        //echo "Name: $data<br>";
 
       ?>
-      
+
     </div>
     <div id="menu1" class="tab-pane fade">
      <?php
@@ -214,7 +214,7 @@ $row=mysqli_fetch_array($send);
        //echo "Name: $user<br>";
        ?>
     </div>
-    
+
   </div>
 </div>-->
 
