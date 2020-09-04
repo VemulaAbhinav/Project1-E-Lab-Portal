@@ -20,8 +20,8 @@ if(isset($_SESSION['un']))
 <!DOCTYPE html>
 <html>
 <head>
-  
-    
+
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Description</title>
@@ -91,7 +91,7 @@ echo "
 </div>
 
 <div class=\"col-sm-1\">
-  
+
 </div>
 
 </div>";
