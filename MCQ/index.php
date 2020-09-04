@@ -6,7 +6,7 @@
 
 <title>R.A.M</title>
 <link  rel="stylesheet" href="css/bootstrap.min.css"/>
- <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>    
+ <link  rel="stylesheet" href="css/bootstrap-theme.min.css"/>
  <link rel="stylesheet" href="css/main.css">
  <link  rel="stylesheet" href="css/font.css">
  <script src="js/jquery.js" type="text/javascript"></script>
@@ -30,7 +30,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="row">
 
 <div class="col-lg-6" style="padding-top: 14px" >
-<span class="logo"><a href="../home.php"><img src="image/logo.png" height="40px" width="150px"></a></span></div>
+<span class="logo"><a href="../home.php"><img src="image/logo1.png" height="40px" width="150px"></a></span></div>
 
 <div class="col-md-2 col-md-offset-4" style="padding-top: 20px;">
 <a data-toggle="modal" data-target="#myModal"><button class="btn btn-info">Login</button></a></div>
@@ -49,10 +49,10 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-3 control-label" for="email"></label>  
+  <label class="col-md-3 control-label" for="email"></label>
   <div class="col-md-6">
   <input id="email" name="email" placeholder="Enter your email-id" class="form-control input-md" type="email">
-    
+
   </div>
 </div>
 
@@ -62,7 +62,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
   <label class="col-md-3 control-label" for="password"></label>
   <div class="col-md-6">
     <input id="password" name="password" placeholder="Enter your Password" class="form-control input-md" type="password">
-    
+
   </div>
 </div>
 
@@ -86,17 +86,17 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <br><br><br>
 <div class="col-md-7"></div>
 <div class="col-md-3 panel" style="margin-left: 500px; background-color: transparent;">
-<!-- sign in form begins -->  
+<!-- sign in form begins -->
   <form class="form-horizontal" name="form" action="sign.php?q=account.php" onSubmit="return validateForm()" method="POST">
 <fieldset>
 
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-12 control-label" for="name"></label>  
+  <label class="col-md-12 control-label" for="name"></label>
   <div class="col-md-12">
   <input id="name" name="name" placeholder="Enter your name" class="form-control input-md" type="text">
-    
+
   </div>
 </div>
 
@@ -112,7 +112,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
   <label class="col-md-12 control-label title1" for="email"></label>
   <div class="col-md-12">
     <input id="email" name="email" placeholder="Enter your email-id" class="form-control input-md" type="email">
-    
+
   </div>
 </div>
 
@@ -125,7 +125,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
   <label class="col-md-12 control-label" for="password"></label>
   <div class="col-md-12">
     <input id="password" name="password" placeholder="Enter your password" class="form-control input-md" type="password">
-    
+
   </div>
 </div>
 
@@ -133,7 +133,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
   <label class="col-md-12control-label" for="cpassword"></label>
   <div class="col-md-12">
     <input id="cpassword" name="cpassword" placeholder="Confirm Password" class="form-control input-md" type="password">
-    
+
   </div>
 </div>
 <?php if(@$_GET['q7'])
@@ -141,7 +141,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-12 control-label" for=""></label>
-  <div class="col-md-12" style="margin-left: 100px"> 
+  <div class="col-md-12" style="margin-left: 100px">
     <input  type="submit" value="Sign Up" class="btn btn-success btn-lg"/>
   </div>
 </div>
@@ -176,7 +176,7 @@ var b = document.forms["form"]["cpassword"].value;if (a!=b){alert("Passwords mus
 <div class="col-md-6">
 <form role="form" method="post" action="admin.php?q=index.php">
 <div class="form-group">
-<input type="text" name="uname" maxlength="20"  placeholder="Admin user id" class="form-control"/> 
+<input type="text" name="uname" maxlength="20"  placeholder="Admin user id" class="form-control"/>
 </div>
 <div class="form-group">
 <input type="password" name="password" maxlength="15" placeholder="Password" class="form-control"/>
