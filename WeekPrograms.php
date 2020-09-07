@@ -47,6 +47,15 @@ require_once("header1.php");
 </td>
 <td>
   <h4>
+<form action="Program4.php" method="POST" name="form4" onsubmit="document.form4.target='side2'; return true;">
+&emsp;
+<input type="submit" name="" value="Program-4"  >
+</form>
+<br>
+</h4>
+</td>
+<td>
+  <h4>
 
 <br>
 </h4>
