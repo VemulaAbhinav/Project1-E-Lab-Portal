@@ -84,16 +84,16 @@ require_once("header1.php");
 <div class="col-sm-7">
 <div class="form-group">
 <form action="compile1.php" name="f2" method="POST">
-<h3 style= "color:white;">write a c program to find sum of two numbers?</h3>
+<h3 style= "color:white;">write a c program to find prime number given number is prime or not?</h3>
 <select class="form-control" name="language">
 <option value="c">C</option>
 
 </select><br><br>
 
 <label for="ta" style= "color:white;">Write Your Code</label>
-<textarea class="form-control" name="code" rows="10" cols="50"></textarea><br><br>
+<textarea class="form-control" name="code"  rows="30" cols="100%"></textarea><br><br>
 <label for="in" style= "color:white;">Enter Your Input</label>
-<textarea class="form-control" name="input" rows="10" cols="50"></textarea><br><br>
+<textarea class="form-control" name="input" rows="13" cols="70%"></textarea><br><br>
 <input type="submit" class="btn btn-success" value="Run Code"><br><br><br>
 
 

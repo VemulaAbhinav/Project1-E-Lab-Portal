@@ -17,9 +17,9 @@ require_once("header1.php");
         <td>
 <h4>
 
-  <form action="page2.php" method="POST" name="form1" onsubmit="document.form1.target='side2'; return true;">
+  <form action="Program1.php" method="POST" name="form1" onsubmit="document.form1.target='side2'; return true;">
   &emsp;
-  <input type="submit" name="" value="program-1"  >
+  <input type="submit" name="" value="Program-1"  >
   &emsp;&emsp;&emsp;
  </form>
 
@@ -28,8 +28,8 @@ require_once("header1.php");
 </td>
  <td>
    <h4>
- <form action="page3.php" method="POST" name="form2" onsubmit="document.form2.target='side2'; return true;">
- <input type="submit" name="" value="program-2"  >
+ <form action="Program2.php" method="POST" name="form2" onsubmit="document.form2.target='side2'; return true;">
+ <input type="submit" name="" value="Program-2" >
 </form>
 <br>
 </h4>
@@ -38,9 +38,9 @@ require_once("header1.php");
   <tr>
 <td>
   <h4>
-<form action="page4.php" method="POST" name="form3" onsubmit="document.form3.target='side2'; return true;">
+<form action="Program3.php" method="POST" name="form3" onsubmit="document.form3.target='side2'; return true;">
 &emsp;
-<input type="submit" name="" value="program-3"  >
+<input type="submit" name="" value="Program-3"  >
 </form>
 <br>
 </h4>

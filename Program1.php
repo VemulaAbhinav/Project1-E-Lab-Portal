@@ -105,11 +105,10 @@ require_once("header1.php");
   <option value="c">C</option>
 
 </select><br><br>
-<select  class="form-control" name="progid">
-<option value="week1a">week1a</option>
-</select><br><br>
+
+</select>
 <label for="ta" style= "color:white;" >Write Your Code</label><br>
-<textarea class="form-control1" name="code" rows="30" cols="100%" value="abhinav" ><?php
+<textarea class="form-control1" name="code" rows="30" cols="100%"  ><?php
 
 $query = "SELECT  name from check3 where id=9";
             $result = mysqli_query($con,$query);
