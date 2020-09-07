@@ -47,7 +47,7 @@ require_once("header1.php");
 </td>
 <td>
   <h4>
-<form action="Program4.php" method="POST" name="form4" onsubmit="document.form4.target='side2'; return true;">
+<form action="https://www.jdoodle.com/embed/v0/2?stdin=0&arg=0"  name="form4" onsubmit="document.form4.target='side2'; return true;">
 &emsp;
 <input type="submit" name="" value="Program-4"  >
 </form>
