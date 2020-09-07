@@ -22,8 +22,8 @@ if(isset($_SESSION['un']))
 <!DOCTYPE html>
 <html>
 <head>
-  
-    
+
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Home</title>
@@ -58,9 +58,9 @@ if(isset($_SESSION['un']))
       <li class="space"><a href="debug.php"><i class="fa fa-check-square ispace"></i>Debug</a></li>
       <li class="lgspace space"><a href="profile.php?user=<?php echo("$username"); ?>"><i class="fa fa-user ispace"></i><?php echo("$username"); ?></a></li>
       <li class="space"><a href="logout.php"><i class="fa fa-power-off ispace"></i>Logout</a></li>
-      
+
     </ul>
-  
+
 </nav>
 </div>
 </div>
@@ -76,7 +76,7 @@ if(isset($_SESSION['un']))
 </div>
 
 <div class="col-sm-1">
-  
+
 </div>
 
 </div>
@@ -91,7 +91,7 @@ if(isset($_SESSION['un']))
 
 
 <?php
-//Import the SDK 
+//Import the SDK
 require_once("/opt/lampp/htdocs/roj/path/sdk/index.php");
 
 
@@ -137,9 +137,9 @@ foreach ($response as $value) {
          $str=$value['output'];
 
 
-      
 
-       
+
+
         if(error_reporting(1))
         {
           break;
@@ -151,15 +151,15 @@ foreach ($response as $value) {
       {
                  echo "<textarea id='div' class=\"form-control\" name=\"output\" rows=\"10\" cols=\"50\">Compilation Error Or Submit Failed! Check Your Language And Submit Code Again.</textarea><br><br>";
                  break;
-                  
+
       }
 
 
-     
-      
-     
 
-     
+
+
+
+
 }
 }
 else

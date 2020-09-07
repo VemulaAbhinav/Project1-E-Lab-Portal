@@ -11,7 +11,6 @@ $query="INSERT into user(name,pass,status,email) VALUES('$user','$password','use
 $sq=mysqli_query($con,$query);
 
 
-
 if($sq)
 {
 	header("Location:login.php");

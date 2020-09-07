@@ -17,8 +17,8 @@ if(isset($_SESSION['un']))
 <!DOCTYPE html>
 <html>
 <head>
-  
-    
+
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Contest</title>
@@ -35,7 +35,7 @@ if(isset($_SESSION['un']))
         <script src="bootstrap-3.3.7/js/bootstrap.js" </script>
         <script src="js/jquery.nivo.slider.js" type="text/javascript"></script>
 
-                  
+
 
 
 
@@ -60,7 +60,7 @@ require_once("header.php");
 </div>
 
 <div class="col-sm-1">
-  
+
 </div>
 
 </div>
@@ -107,7 +107,7 @@ $sq3=mysqli_query($con,$q3);
       $sq4=mysqli_query($con,$q4);
       $sq5=mysqli_query($con,$q5);
       $sq6=mysqli_query($con,$q6);
-      
+
 
 
 
@@ -124,11 +124,11 @@ while($row=mysqli_fetch_array($sq3))
       $shr=$nr['end_at'];
       $shm=$nm['end_at'];
       $shs=$ns['end_at'];
-      
+
       $cur=date('H');
       $curm=date('i');
       $curs=date('s');
-      
+
 
       $h=$shr-$cur;
       $mt=$shm-$curm;
@@ -150,7 +150,7 @@ while($row=mysqli_fetch_array($sq3))
       {
         $h=$h+24;
       }
-      
+
       $en=$row['end_at'];
 
       $seconds = strtotime($t) - strtotime($m);
@@ -160,29 +160,29 @@ while($row=mysqli_fetch_array($sq3))
       $hr=intval($min/60);
       $m=intval($min%60);
 
-     
 
 
-      
-
-     
-      
 
 
-     
+
+
+
+
+
+
       /*echo(" <a href=\"save.php?name=$row[table_name]\">$row[table_name]</a><br><br>");*/
         if($row['date_on']==$d && $seconds>=0 && $ss>=0 )
         {
              echo("
-                
+
 
               <div class=\"xm\">Lab Name: <a href=\"contestproblem.php?name=$row[cname]\">$row[cname]</a><br><br>Lab ID: $row[id]<br><br>Lab Date: $row[date_on] <br><br>Start Time: $row[start_at]<br><br>End Time: $row[end_at] <br><br> Status: <b>Running</b> <br>
               <center>
               <a href=\"contestproblem.php?name=$row[cname]\"><button class='btn btn-info btn-sm' style='border-color: black'>Start</button></a>
               </center>
               </div>
-            
-            
+
+
               ");
          }
          else if($d>$row['date_on'] || ($d==$row['date_on'] && $t>$en))
@@ -213,7 +213,7 @@ if(!isset($_POST['cn']))
         $sq3=mysqli_query($con,$q3);
     }
 
-    
+
 
       $q4="SELECT TIME_FORMAT(end_at,'%H') end_at FROM rapl_oj_contest  ORDER BY date_on DESC";
        $q5="SELECT TIME_FORMAT(end_at,'%i') end_at FROM rapl_oj_contest  ORDER BY date_on DESC";
@@ -222,10 +222,10 @@ if(!isset($_POST['cn']))
       $sq4=mysqli_query($con,$q4);
       $sq5=mysqli_query($con,$q5);
       $sq6=mysqli_query($con,$q6);
-      
 
-      
-   
+
+
+
   while($row=mysqli_fetch_array($sq3))
     {
       $d=date("Y-m-d");
@@ -263,7 +263,7 @@ if(!isset($_POST['cn']))
       {
         $h=$h+24;
       }
-      
+
       $en=$row['end_at'];
 
       $seconds = strtotime($t) - strtotime($m);
@@ -273,28 +273,28 @@ if(!isset($_POST['cn']))
       $hr=intval($min/60);
       $m=intval($min%60);
 
-     
 
 
-      
-
-     
-      
 
 
-     
+
+
+
+
+
+
       /*echo(" <a href=\"save.php?name=$row[table_name]\">$row[table_name]</a><br><br>");*/
         if($row['date_on']==$d && $seconds>=0 && $ss>=0 )
         {
              echo("
 
-              
+
 
               <div class=\"xm\">Lab Name: <a href=\"contestproblem.php?name=$row[cname]\">$row[cname]</a><br><br>Lab ID: $row[id]<br><br>Lab Date: $row[date_on] <br><br>Start Time: $row[start_at]<br><br>End Time: $row[end_at] <br><br> Status: <b>Running</b><br>
               <center>
               <a href=\"contestproblem.php?name=$row[cname]\"><button class='btn btn-info btn-sm' style='border-color: black'>Start</button></a>
               </center>
-              
+
 
               </div>
               ");
