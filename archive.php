@@ -4,7 +4,7 @@ session_start();
 
 if(!isset($_SESSION["un"]))
 {
-	header("Location:login.html");
+	header("Location:login.php");
 }
 
 if(isset($_SESSION['un']))
