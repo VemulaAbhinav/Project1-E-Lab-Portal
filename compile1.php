@@ -83,13 +83,10 @@ if($result->num_rows >0 )
 }
 else
 {
-  $q2="INSERT INTO code (source_code, id, submited) VALUES ($code,$progid,$username)";
+  $q2="INSERT INTO code (source_code, id, submited) VALUES ('$code','$progid','$username')";
   $result = mysqli_query($con,$q2);
 }
 }
-
-
-
 
 
 	$languageID=$_POST["language"];

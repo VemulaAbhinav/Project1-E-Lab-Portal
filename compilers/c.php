@@ -85,7 +85,7 @@ code 1
 //function goBack() {
   //window.history.go(-1);
 //}
-    document.write('<a href="' + document.referrer + '">Go Back</a>');
+    document.write('<a href="' + document.referrer + '" style="color: white; font-size: 30px">Go Back</a>');
 
 </script>
 

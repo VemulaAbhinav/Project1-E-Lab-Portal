@@ -129,7 +129,6 @@ require_once("header1.php");
 
          //echo($username);
      }
-     //echo"</table>";
 
 
     ?>
