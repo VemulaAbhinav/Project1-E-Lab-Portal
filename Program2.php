@@ -92,7 +92,7 @@ require_once("header1.php");
 </select><br><br>
 
 <label for="ta" style= "color:white;">Write Your Code</label>
-<textarea class="form-control" name="code" rows="30" cols="100%" value="">
+<textarea class="form-control1" name="code" rows="30" cols="100%" value="">
   <?php
 
 
@@ -136,7 +136,7 @@ require_once("header1.php");
 <label for="in" style= "color:white;">Enter Your Input</label>
 <textarea class="form-control" name="input" rows="13" cols="70%">
 </textarea><br><br>
-<input type="submit" class="btn btn-success" value="Run Code"><br><br><br>
+<input type="submit" class="btn btn-success" value="Run Code" onclick=“return reset();><br><br><br>
 
 
 </form>

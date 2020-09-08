@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+require_once("config.php");
 if(!isset($_SESSION["un"]))
 {
   header("Location:login.php");
@@ -10,8 +10,9 @@ if(!isset($_SESSION["un"]))
 if(isset($_SESSION['un']))
 {
   $username=$_SESSION['un'];
+  $_SESSION["weekid"] ='week1prog3';
+  $progid=$_SESSION["weekid"];
 }
-
 
 
 
@@ -84,17 +85,58 @@ require_once("header1.php");
 <div class="col-sm-7">
 <div class="form-group">
 <form action="compile1.php" name="f2" method="POST">
-<h3 style= "color:white;">write a c program to find prime number given number is prime or not?</h3>
+<h3 style= "color:white;">write a c program to find multiplication of two numbers?</h3>
 <select class="form-control" name="language">
 <option value="c">C</option>
 
 </select><br><br>
 
 <label for="ta" style= "color:white;">Write Your Code</label>
-<textarea class="form-control" name="code"  rows="30" cols="100%"></textarea><br><br>
+<textarea class="form-control1" name="code" rows="30" cols="100%" value="">
+  <?php
+
+
+/*$query1="DROP TABLE IF EXISTS Counts";
+
+
+
+  cur.execute('''
+
+  CREATE TABLE Counts (org TEXT, count INTEGER)''')*/
+
+  $query ="SELECT  source_code from code where id='".$progid."' And submited='".$username."'";
+              $result = mysqli_query($con,$query);
+              if($result)
+              {
+              	//echo "retrived success $username ";
+              }
+              else
+              {
+              //	echo("Failed to store<br>");
+              }
+               //echo"<table>";
+    while($row=mysqli_fetch_assoc($result))
+     {
+         /*echo"<tr>";
+         echo"<td>";?> <?php echo $row['id'] ; ?>  <?php echo "</td></tr><tr>";
+        // echo"<td>";?> <?php echo $row['name'] ; ?>  <?php echo "</td>";
+
+         echo"</tr>";
+         */
+
+         echo($row['source_code']);
+
+
+         //echo($username);
+     }
+
+
+    ?>
+</textarea><br><br>
 <label for="in" style= "color:white;">Enter Your Input</label>
-<textarea class="form-control" name="input" rows="13" cols="70%"></textarea><br><br>
-<input type="submit" class="btn btn-success" value="Run Code"><br><br><br>
+<textarea class="form-control" name="input" rows="13" cols="70%">
+</textarea><br><br>
+<input type="submit" class="btn btn-success" value="Run Code" onclick=“return reset();><br><br><br>
 
 
 </form>

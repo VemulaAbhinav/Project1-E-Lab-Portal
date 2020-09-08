@@ -73,7 +73,7 @@ if(isset($_POST['code']))
 {
 
 $code=$_POST['code'];
-$query ="SELECT  source_code from code where id='".$progid."' And submited='".$username."'";
+/*$query ="SELECT  source_code from code where id='".$progid."' And submited='".$username."'";
 $result = mysqli_query($con,$query);
 
 if($result->num_rows >0 )
@@ -83,9 +83,19 @@ if($result->num_rows >0 )
 }
 else
 {
+
+  $q3="DELETE FROM code where id='".$progid."' And submited='".$username."'";
+  $result = mysqli_query($con,$q3);
+
   $q2="INSERT INTO code (source_code, id, submited) VALUES ('$code','$progid','$username')";
   $result = mysqli_query($con,$q2);
-}
+}*/
+
+$q3="DELETE FROM code where id='".$progid."' And submited='".$username."'";
+$result = mysqli_query($con,$q3);
+
+$q2="INSERT INTO code (source_code, id, submited) VALUES ('$code','$progid','$username')";
+$result = mysqli_query($con,$q2);
 }
 
 
