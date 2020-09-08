@@ -108,7 +108,8 @@ require_once("header1.php");
 
 </select>
 <label for="ta" style= "color:white;" >Write Your Code</label><br>
-<textarea class="form-control1" name="code" rows="30" cols="100%"  ><?php
+<textarea class="form-control1" name="code" rows="30" cols="100%"  >
+<?php
 
 $query = "SELECT  name from check3 where id=9";
             $result = mysqli_query($con,$query);
@@ -125,7 +126,7 @@ $query = "SELECT  name from check3 where id=9";
    {
        /*echo"<tr>";
        echo"<td>";?> <?php echo $row['id'] ; ?>  <?php echo "</td></tr><tr>";
-       echo"<td>";?> <?php echo $row['name'] ; ?>  <?php echo "</td>";
+      // echo"<td>";?> <?php echo $row['name'] ; ?>  <?php echo "</td>";
 
        echo"</tr>";
        */
@@ -135,7 +136,8 @@ $query = "SELECT  name from check3 where id=9";
    //echo"</table>";
 
 
-  ?></textarea><br><br>
+  ?>
+</textarea><br><br>
 <label for="in" style= "color:white;" >Enter Your Input</label>
 <textarea class="form-control1" name="input" rows="13" cols="70%"></textarea><br><br>
 <input type="submit" class="btn btn-success" value="Run Code"><br><br><br>

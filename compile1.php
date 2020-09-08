@@ -9,6 +9,7 @@ if(!isset($_SESSION["un"]))
 if(isset($_SESSION['un']))
 {
   $username=$_SESSION['un'];
+  $progid=$_SESSION["weekid"];
 }
 
 
@@ -70,20 +71,23 @@ require_once("header1.php");
 <?php
 if(isset($_POST['code']))
 {
-$id1=$_POST['progid'];
-$cd=$_POST['code'];
-//$user1=$_SESSION['user1'];
-$query="INSERT INTO check3 (name) value ('$cd')";
-$sq=mysqli_query($con,$query);
-if($sq)
+
+$code=$_POST['code'];
+$query ="SELECT  source_code from code where id='".$progid."' And submited='".$username."'";
+$result = mysqli_query($con,$query);
+
+if($result->num_rows >0 )
 {
-	//echo "stored success $username with $id1 ";
+    $q1="UPDATE code SET source_code='".$code."',id='".$progid."' where submited='".$username."'";
+    $result = mysqli_query($con,$q1);
 }
 else
 {
-	//echo("Failed to store<br>");
+  $q2="INSERT INTO code (source_code, id, submited) VALUES ($code,$progid,$username)";
+  $result = mysqli_query($con,$q2);
 }
 }
+
 
 
 
