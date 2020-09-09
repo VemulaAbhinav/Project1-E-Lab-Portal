@@ -21,8 +21,8 @@ if(isset($_SESSION['un']))
 <!DOCTYPE html>
 <html>
 <head>
-  
-    
+
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>All Submission</title>
@@ -65,7 +65,7 @@ include("header.php");
 </div>
 
 <div class="col-sm-1">
-  
+
 </div>
 
 </div>
@@ -81,10 +81,9 @@ include("header.php");
     <table class="table">
     <thead>
     <tr>
-     <th>ID</th>
-     <th>Name</th>
-     <th>Problem Name</th>
-     <th>Verdict</th>
+     <th>Program_ID</th>
+     <th>User_Name</th>
+     <th>Status</th>
     </tr>
     </thead>
     <tbody>
@@ -93,16 +92,40 @@ include("header.php");
 
 <?php
 
-
 error_reporting(0);
-if(isset($_POST['id']))
+
+$query ="SELECT * from code where submited='".$username."'";
+$result = mysqli_query($con,$query);
+while($row=mysqli_fetch_array($result))
+{
+  echo "<tr>";
+  echo "<td>" . $row['id'] . "</td>";
+  echo "<td>" . $row['submited'] ."</td>";
+  echo "<td>Attempted</td>";
+  echo "</tr>";
+  }
+echo "</tbody>";
+echo "</table>";
+          // Free result
+mysqli_free_result($result);
+//mycode start displaying the list
+
+
+
+
+
+
+
+
+
+/*if(isset($_POST['id']))
 {
   $cid=$_POST['id'];
   $uo=$_POST['result'];
   $pname=$_POST['pb'];
   $nid=$_POST['mid'];
   $result=$_POST['vd'];
-  
+
 }
 
 $ch=1;
@@ -129,7 +152,7 @@ if(!isset($_POST['id']) && !isset($_GET['name']))
 
    $show="SELECT * FROM submission ORDER BY sid DESC limit $start,$per_page";
 
-   
+
    $sts=mysqli_query($con,$show);
 
 
@@ -165,7 +188,7 @@ while($row=mysqli_fetch_array($sts))
   echo "<div class=\"contain con\"><ul class=\"pagination\"><li><a href=\"allsubmission.php?page=1\">First Page</a></li>";
 
   for ($i=1; $i <$total_page ; $i++) {
-      
+
     if($page==$i)
     {
       $c="active";
@@ -206,7 +229,7 @@ if(isset($_GET['name']))
 
    $show="SELECT * FROM submission WHERE sname='$name' ORDER BY sid DESC limit $start,$per_page";
 
-   
+
    $sts=mysqli_query($con,$show);
 
 
@@ -241,7 +264,7 @@ while($row=mysqli_fetch_array($sts))
   echo "<div class=\"contain con\"><ul class=\"pagination\"><li><a href=\"allsubmission.php?page=1&name=$name\">First Page</a></li>";
 
   for ($i=1; $i <$total_page ; $i++) {
-      
+
     if($page==$i)
     {
       $c="active";
@@ -282,7 +305,7 @@ if(isset($_POST['id']))
   $pname=$_POST['pb'];
   $nid=$_POST['mid'];
   $result=$_POST['vd'];
-  
+
 
 
 
@@ -297,7 +320,7 @@ $ao=$r3['output'];
 
   if($result!="lt")
   {
-   
+
     if($result=="e")
     {
       $result="Compilation Error";
@@ -380,7 +403,7 @@ while($row=mysqli_fetch_array($sts))
   echo "<div class=\"contain con\"><ul class=\"pagination\"><li><a href=\"allsubmission.php?page=1\">First Page</a></li>";
 
   for ($i=1; $i <$total_page ; $i++) {
-      
+
     if($page==$i)
     {
       $c="active";
@@ -395,7 +418,7 @@ while($row=mysqli_fetch_array($sts))
 
   echo "<li><a href=\"allsubmission.php?page=$total_page\">Last Page</a></li></ul></div>";
 
-}
+}*/
 ?>
 
 
