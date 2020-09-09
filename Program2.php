@@ -10,7 +10,7 @@ if(!isset($_SESSION["un"]))
 if(isset($_SESSION['un']))
 {
   $username=$_SESSION['un'];
-  $_SESSION["weekid"] ='week1prog1';
+  $_SESSION["weekid"] ='week1prog2';
   $progid=$_SESSION["weekid"];
 }
 
@@ -85,7 +85,7 @@ require_once("header1.php");
 <div class="col-sm-7">
 <div class="form-group">
 <form action="compile1.php" name="f2" method="POST">
-<h3 style= "color:white;">write a c program to find sum of two numbers?</h3>
+<h3 style= "color:white;">C program to check whether the given number is positive or negative?</h3>
 <select class="form-control" name="language">
 <option value="c">C</option>
 
